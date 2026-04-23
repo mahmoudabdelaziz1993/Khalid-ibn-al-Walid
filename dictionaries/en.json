@@ -1,0 +1,41 @@
+{
+  "direction": "ltr",
+  "hero": {
+    "location": "Mecca, Arabia, 592–642 CE",
+    "title": "The Unsheathed Sword of",
+    "accent": "Allah",
+    "cta": " Explore campaigns"
+  },
+  "achievements": [
+    {
+      "value": "100",
+      "label": "Battles Fought",
+      "subtext": "Undefeated"
+    },
+    {
+      "value": "2",
+      "label": "Empires Defeated",
+      "subtext": "Byzantine & Sasanian Persian"
+    },
+    {
+      "value": "9",
+      "label": "Swords Broken",
+      "subtext": "At Battle of Mu'tah, 629 CE"
+    },
+    {
+      "value": "50,000+",
+      "label": "Enemy Casualties",
+      "subtext": "At Battle of Yarmouk alone"
+    },
+    {
+      "value": "9",
+      "label": "Years of Command",
+      "subtext": "629–638 CE"
+    },
+    {
+      "value": "10",
+      "label": "Cities Conquered",
+      "subtext": "Damascus, Homs, Aleppo, Jerusalem, Al-Hira & more"
+    }
+  ]
+}
