@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export', // Critical: Generates an 'out' folder
+  output: 'export', 
+  basePath: '/Khalid-ibn-al-Walid',
   images: {
-    unoptimized: true, // Required for static exports
+    unoptimized: true, 
   },
 };
 
