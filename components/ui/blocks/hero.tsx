@@ -1,17 +1,10 @@
 "use client";
 import React, { SVGProps, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  BattleIcon,
-  EmpireIcon,
-  SwordIcon,
-  CasualtyIcon,
-  CommandIcon,
-  CityIcon,
-} from "@/components/ui/icons/khalid-icons";
+
 import { Separator } from "@/components/ui/separator";
 import { motion, useInView, useSpring, useTransform } from "motion/react";
-import { Dictionary, Language, maltilangualProps } from "@/app/[lang]/page";
+import {  Language, maltilangualProps } from "@/app/[lang]/page";
 interface Achievement {
   icon?: React.FC<SVGProps<SVGSVGElement>>;
   value: string;
