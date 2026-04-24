@@ -19,7 +19,7 @@ export function ModeToggle({ className }: { className?: string }) {
         <Toggle
             aria-label="Toggle theme"
             size="lg"
-            variant="outline"
+            variant="default"
             pressed={isDark}
             onPressedChange={toggleTheme}
             className={cn(

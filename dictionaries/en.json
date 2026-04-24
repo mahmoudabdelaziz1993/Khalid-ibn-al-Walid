@@ -37,5 +37,218 @@
       "label": "Cities Conquered",
       "subtext": "Damascus, Homs, Aleppo, Jerusalem, Al-Hira & more"
     }
-  ]
+  ],
+  "timeLine": {
+    "id": "campaign-timeline",
+    "badge": "Campaign Timeline",
+    "title": "The Path of the Unconquered",
+    "description": "Tracing the strategic masterclasses of history’s greatest undefeated general, from the deserts of Arabia to the gateways of empires."
+  },
+  "battles": [
+    {
+      "name": "Battle of Uhud",
+      "year": 625,
+      "opponent": "Muslims (pre-conversion)",
+      "role": "Quraysh cavalry commander",
+      "result": "Victory (for Quraysh)",
+      "tacticalNote": "Only defeat inflicted on Muhammad. Khalid used flanking maneuver through Wadi Qanat.",
+      "significance": "Proved Khalid's tactical genius before his conversion"
+    },
+    {
+      "name": "Battle of Mu'tah",
+      "year": 629,
+      "opponent": "Byzantine Empire",
+      "role": "Takeover commander after 3 generals killed",
+      "result": "Tactical withdrawal",
+      "tacticalNote": "Broke 9 swords. Coordinated safe withdrawal of Muslim troops.",
+      "significance": "Earned title 'Sword of Allah' from Prophet Muhammad"
+    },
+    {
+      "name": "Battle of Buzakha",
+      "year": 632,
+      "opponent": "Rebel Arab tribes (Tulayha)",
+      "role": "Supreme commander",
+      "result": "Decisive Muslim victory",
+      "tacticalNote": "Tayy tribe defected before battle. Tulayha fled to Syria.",
+      "significance": "Secured Najd for the Caliphate"
+    },
+    {
+      "name": "Battle of Yamama",
+      "year": 633,
+      "opponent": "Banu Hanifa (Musaylima)",
+      "role": "Field commander",
+      "result": "Decisive Muslim victory",
+      "tacticalNote": "Four assaults. Final storming of enclosed 'Garden of Death'.",
+      "significance": "Musaylima slain. Hanifa tribe subdued."
+    },
+    {
+      "name": "Battle of Walaja",
+      "year": 633,
+      "opponent": "Sasanian Persia",
+      "role": "Invasion commander",
+      "result": "Muslim victory",
+      "tacticalNote": "Double envelopment – hid cavalry behind hills",
+      "significance": "First major Persian army destroyed in open field"
+    },
+    {
+      "name": "Siege of Al-Hira",
+      "year": 633,
+      "opponent": "Sasanian Persia",
+      "role": "Conquering general",
+      "result": "Capitulation",
+      "tacticalNote": "City surrendered. Churches and palaces protected.",
+      "significance": "First tribute from Iraq: 60,000–90,000 dirhams annually"
+    },
+    {
+      "name": "Battle of Ajnadayn",
+      "year": 634,
+      "opponent": "Byzantine Empire",
+      "role": "Supreme commander (Syria)",
+      "result": "Decisive Muslim victory",
+      "tacticalNote": "First major confrontation with Byzantines in Syria",
+      "significance": "First Byzantine field army destroyed"
+    },
+    {
+      "name": "Battle of Fahl (Pella)",
+      "year": "634–635",
+      "opponent": "Byzantine Empire",
+      "role": "Key lieutenant",
+      "result": "Muslim victory",
+      "tacticalNote": "Pursued retreating Byzantines from Ajnadayn",
+      "significance": "Secured Palestine and Transjordan"
+    },
+    {
+      "name": "Siege of Damascus",
+      "year": "634–635",
+      "opponent": "Byzantine Empire",
+      "role": "Gate commander (East Gate)",
+      "result": "Muslim capture",
+      "tacticalNote": "Khalid's forces scaled walls and breached Bab Sharqi while others negotiated",
+      "significance": "First major Syrian city to fall"
+    },
+    {
+      "name": "Battle of Yarmouk",
+      "year": 636,
+      "opponent": "Byzantine Empire (Emperor Heraclius)",
+      "role": "Supreme commander",
+      "result": "Decisive Muslim victory",
+      "tacticalNote": "Split cavalry into two wings. Used camel hobbles as defensive barriers. Enveloped Byzantine left flank.",
+      "significance": "Greatest victory. 50,000+ Byzantine casualties. Destroyed last Byzantine army in Syria. Opened Levant to Muslim rule."
+    },
+    {
+      "name": "Siege of Homs",
+      "year": "636–637",
+      "opponent": "Byzantine Empire",
+      "role": "Lieutenant under Abu Ubayda",
+      "result": "Capitulation",
+      "tacticalNote": "Quarter of Church of St. John reserved for Muslim use",
+      "significance": "First Syrian city with large Muslim population"
+    },
+    {
+      "name": "Conquest of Qinnasrin",
+      "year": 638,
+      "opponent": "Byzantine Empire",
+      "role": "Field commander",
+      "result": "Capitulation",
+      "tacticalNote": "Routed Byzantine force under Minas. Spared inhabitants who claimed Arab descent.",
+      "significance": "Caused Heraclius to abandon Syria for Constantinople"
+    }
+  ],
+  "strategicAchievements": {
+    "id": "strategic-achievements",
+    "badge": "Genius of Command",
+    "title": "Tactical Masterpieces",
+    "description": "Khalid's innovations redefined military science, proving that speed and audacity could dismantle empires.",
+    "testimonials": {
+      "text": "...then the flag was taken by one of Allah's Swords (Khalid bin Al-Walid) and Allah gave them victory.",
+      "speaker": "Prophet Muhammad",
+      "role": "Messenger of Allah",
+      "context": "After the Battle of Mu'tah, 629 CE — referring to Khalid ibn al-Walid",
+      "reference": "Sahih al-Bukhari"
+    },
+    "achievements": [
+      {
+        "id": "water",
+        "name": "The Desert March",
+        "year": 634,
+        "description": "Marched 500–800 men across 6 days and 5 nights of waterless desert from Iraq to Syria.",
+        "innovation": "Drank water stored in camels' stomachs. Had 20 camels drink excessively, sealed their mouths, slaughtered them daily for water.",
+        "outcome": "Arrived in Syria to command the conquest. Described by historian Moshe Gil as 'a feat which has no parallel.'",
+        "stillStudied": true
+      },
+      {
+        "id": "encirclement",
+        "name": "Double Envelopment at Walaja",
+        "year": 633,
+        "description": "First recorded use of double envelopment in Islamic military history.",
+        "innovation": "Hid cavalry behind hills to flank the Persian army from both sides.",
+        "outcome": "First major Sasanian army destroyed in open field.",
+        "stillStudied": true
+      },
+      {
+        "id": "camel",
+        "name": "Camel Hobble Defense at Yarmouk",
+        "year": 636,
+        "description": "Used camels as mobile defensive barriers.",
+        "innovation": "Hobbled camels in rows to create barriers Byzantine cavalry could not penetrate. Archers fired from behind.",
+        "outcome": "Byzantine cavalry momentum halted, flanks exposed.",
+        "stillStudied": true
+      },
+      {
+        "id": "siege",
+        "name": "The Siege of Damascus",
+        "year": "634 CE",
+        "description": "A complex multi-gate siege against a major fortified metropolis.",
+        "innovation": "Simultaneous coordination of specialized units across all gates, coupled with an elite 'suicide squad' to scale the walls under cover of a feast night.",
+        "outcome": "Captured the city with minimal casualties, turning it into a logistical hub for the Levant.",
+        "tag": "Siege Craft"
+      }
+    ]
+  },
+  "testimonials": {
+    "id": "testimonials",
+    "badge": "Witnesses of History",
+    "title": "A Legacy Beyond Compare",
+    "items": [
+      {
+        "id": "prophet",
+        "quote": "“Truly, he is a Sword of Allah that He has unsheathed against the disbelievers.”",
+        "author": "Prophet Muhammad (PBUH)",
+        "role": "Messenger of Allah",
+        "source": "Sahih al-Bukhari"
+      },
+      {
+        "id": "abubakr",
+        "quote": "“Women are incapable of giving birth to the likes of Khalid.”",
+        "author": "Abu Bakr As-Siddiq",
+        "role": "First Caliph of Islam",
+        "source": "Ibn Kathir, Al-Bidayah wan-Nihayah"
+      },
+      {
+        "id": "heraclius",
+        "quote": "“Farewell, Syria... What an excellent land this is for the enemy!”",
+        "author": "Heraclius",
+        "role": "Byzantine Emperor",
+        "source": "Chronicles of Al-Tabari"
+      }
+    ]
+  },
+  "footer": {
+    "id": "footer",
+    "rights": "All Rights Reserved. Designed for the legacy of the Sword of Allah."
+  },
+  "navigation": {
+    "title": "Sitemap",
+    "links": [
+      { "title": "Campaign Timeline", "href": "#campaign-timeline" },
+      { "title": "Strategic Achievements", "href": "#strategic-achievements" },
+      { "title": "Testimonials", "href": "#testimonials" }
+    ]
+  },
+  "name": "Khalid ibn al-Walid",
+  "seo": {
+    "title": "Khalid ibn al-Walid | The Undefeated Commander",
+    "description": "Explore the strategic brilliance and military legacy of Khalid ibn al-Walid, the Sword of Allah.",
+    "keywords": "Khalid ibn al-Walid, Islamic History, Military Strategy, Sword of Allah"
+  }
 }

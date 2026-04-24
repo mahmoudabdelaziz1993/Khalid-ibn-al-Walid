@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/icons/khalid-icons";
 import { Separator } from "@/components/ui/separator";
 import { motion, useInView, useSpring, useTransform } from "motion/react";
-import { Dictionary, Language } from "@/app/[lang]/page";
+import { Dictionary, Language, maltilangualProps } from "@/app/[lang]/page";
 interface Achievement {
   icon?: React.FC<SVGProps<SVGSVGElement>>;
   value: string;
@@ -53,16 +53,15 @@ const Achievement: React.FC<Achievement & { lang: Language }> = ({ icon: Icon, v
 
     >
       {Icon && <Icon className="w-12 h-12 text-primary" />}
-      <p className="sm:text-xl text-lg font-semibold text-background dark:text-foreground">
+      <p className="sm:text-xl text-lg font-semibold dark:text-primary text-accent">
         <Counter value={value} lang={lang} />
       </p>
-      <p className="text-sm font-normal text-muted-foreground">
+      <p className="text-sm font-normal text-accent">
         {label}
       </p>
     </div>
   );
 };
-// const militaryAchievements: readonly Achievement[] =
 //   [
 //     {
 //       icon: BattleIcon,
@@ -102,12 +101,9 @@ const Achievement: React.FC<Achievement & { lang: Language }> = ({ icon: Icon, v
 //     }
 //   ] as const;
 
-interface HeroProps {
-  dictionary: Dictionary; // Ideally, define a specific Type/Interface for your JSON
-  lang: 'en' | 'ar';
-}
 
-const HeroSection: React.FC<HeroProps> = ({ dictionary, lang }) => {
+
+const HeroSection: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { hero, achievements } = dictionary;

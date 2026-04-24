@@ -1,40 +1,28 @@
 "use client";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { motion } from "motion/react";
-import { ArrowDownUp, BellRing, RotateCw, Tag } from "lucide-react";
-
-const Feature = () => {
-  const featureData = [
-    {
-      id: 1,
-      icon: ArrowDownUp,
-      content: "Instantly sync and update your documentation across teams without manual rework.",
-    },
-    {
-      id: 2,
-      icon: BellRing,
-      content: "Get real-time alerts when docs are updated, reviewed, or need your attention.",
-    },
-    {
-      id: 3,
-      icon: RotateCw,
-      content: "Automatically keep your documentation up to date with seamless content refreshes.",
-    },
-    {
-      id: 4,
-      icon: Tag,
-      content: "Organize your docs with smart tags for faster search and better discoverability.",
-    },
-  ];
+import { maltilangualProps } from "@/app/[lang]/page";
+import { Water, Siege, Camel, Encirclement } from '@/components/ui/icons/khalid-icons'
+import { SVGProps } from "react";
+const Feature: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
+  const { strategicAchievements } = dictionary
+  const ICON_MAP: Record<string, React.FC<SVGProps<SVGSVGElement>>> = {
+    water: Water,
+    siege: Siege,
+    camel: Camel,
+    encirclement: Encirclement
+  }
+  const achievements = strategicAchievements.achievements.map((achievement) => ({
+    ...achievement,
+    icon: ICON_MAP[achievement.id]
+  }))
 
   return (
-    <section>
+    <section id={strategicAchievements.id}>
       <div className="lg:py-20 sm:py-16 py-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-8">
           <div className="flex flex-col gap-8 md:gap-12">
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -44,26 +32,22 @@ const Feature = () => {
                 duration: 0.8,
                 ease: [0.21, 0.47, 0.32, 0.98],
               }}
-              className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between gap-4"
+              className="flex flex-col  items-center justify-center  gap-4"
             >
-              <div className="flex flex-col gap-4 max-w-full items-center md:items-start text-center md:text-left md:max-w-xl">
+              <div className="flex flex-col gap-4  items-center text-center ltr:md:text-left rtl:md:text-right">
                 <Badge
                   variant={"outline"}
-                  className="px-3 py-1 h-auto text-sm font-normal"
+                  className="px-3 py-1 h-auto text-sm font-normal self-center"
                 >
-                  Features
+                  {strategicAchievements.badge}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-semibold">
-                  Leading with innovation
+                  {strategicAchievements.title}
                 </h2>
                 <p className="text-lg font-normal text-muted-foreground">
-                  We&apos;re west coast change-makers in a complex world, crafting
-                  purposeful and powerful brands with fluidity
+                  {strategicAchievements.description}
                 </p>
               </div>
-              <Button className="rounded-full px-5 py-2.5 shadow-xs h-auto cursor-pointer">
-                <a href="#">Browse more block</a>
-              </Button>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6">
@@ -77,36 +61,34 @@ const Feature = () => {
                 }}
                 className="p-6 sm:p-16 rounded-2xl bg-[url('https://images.shadcnspace.com/assets/feature/feature-01-img.webp')] object-cover bg-center h-full w-full bg-cover bg-no-repeat"
               >
-                <Card className="flex flex-col sm:flex-row items-start gap-6 sm:gap-12 pt-6 sm:py-10 border-none shadow-none ring-0 rounded-lg">
+                <Card className="flex flex-col  items-start gap-6 sm:gap-12 pt-6 sm:py-10 border-none shadow-none ring-0 rounded-lg">
                   <CardContent className="flex flex-col gap-6 px-6 sm:px-8">
-                    <Avatar className="size-12">
+                    {/* <Avatar className="size-12">
                       <AvatarFallback className="bg-primary/10 text-primary">
                         JD
                       </AvatarFallback>
-                    </Avatar>
-                    <h3 className="text-xl sm:text-2xl font-medium">
-                      “Before Shadcn Space, we stitched UIs together from random
-                      snippets. Now we ship polished interfaces in hours for
-                      frontend.”
+                    </Avatar> */}
+                    <h3 className="text-xl sm:text-5xl font-medium">
+                      {strategicAchievements.testimonials.text}
                     </h3>
                   </CardContent>
                   <CardFooter className="bg-card border-none w-full px-6 sm:px-8 py-4 sm:py-0 flex flex-col items-start gap-0.5">
                     <p className="text-sm font-medium text-primary">
-                      JOHNATHAN DOE
+                      {strategicAchievements.testimonials.speaker}
                     </p>
                     <span className="text-xs font-normal text-muted-foreground uppercase">
-                      HEAD OF FINANCE @SHADCN SPACE
+                      {strategicAchievements.testimonials.role}
                     </span>
                   </CardFooter>
                 </Card>
               </motion.div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
-                {featureData.map((value) => {
-                  const Icon = value.icon;
+                {achievements.map((value) => {
+                  // const Icon = value.icon;
                   return (
                     <motion.div
-                      key={value.id}
+                      key={value.name}
                       initial={{ x: 100, opacity: 0 }}
                       whileInView={{ x: 0, opacity: 1 }}
                       viewport={{ once: true }}
@@ -115,15 +97,16 @@ const Feature = () => {
                         ease: [0.21, 0.47, 0.32, 0.98],
                       }}
                     >
-                      <Card className="py-8 bg-muted ring-0 border-0 h-full">
-                        <CardContent className="w-full h-full px-8 flex flex-col items-start gap-12 justify-between">
-                          <Icon
-                            className="w-6 h-6 text-muted-foreground"
-                            strokeWidth={1.5}
-                          />
-                          <p className="text-base text-primary font-normal">
-                            {value.content}
+                      <Card className="py-8 bg-muted text-muted-foreground ring-0 border-0 h-full relative">
+                        <CardContent className="w-full h-full px-8 flex flex-col items-start gap-3  ">
+                          {value.icon && <value.icon className="w-full h-full text-primary opacity-20 absolute -bottom-1/4 -inset-e-1/2" />}
+                          <h3 className="text-lg font-semibold text-primary">{value.name}</h3>
+                          <p className="text-base  font-normal">
+                            {value.innovation}  {value.description} {value.outcome}
                           </p>
+                        
+                           
+                        
                         </CardContent>
                       </Card>
                     </motion.div>

@@ -1,86 +1,44 @@
 "use client";
 
+import { maltilangualProps } from "@/app/[lang]/page";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-export interface Battle {
-  year: string;
-  name: string;
-  opponent: string;
-  result: string;
-  significance: string;
-}
 
-const battles: Battle[] = [
-  {
-    year: "625 CE",
-    name: "Battle of Uhud",
-    opponent: "Muslims (pre-conversion)",
-    result: "Victory",
-    significance: "Only defeat ever inflicted on Prophet Muhammad",
-  },
-  {
-    year: "629 CE",
-    name: "Battle of Mu'tah",
-    opponent: "Byzantine Empire",
-    result: "Tactical Withdrawal",
-    significance: "Earned title 'Sword of Allah' — broke 9 swords",
-  },
-  {
-    year: "633 CE",
-    name: "Battle of Yamama",
-    opponent: "Musaylima's Hanifa",
-    result: "Decisive Victory",
-    significance: "Killed rival prophet Musaylima",
-  },
-  {
-    year: "634 CE",
-    name: "Battle of Ajnadayn",
-    opponent: "Byzantine Empire",
-    result: "Decisive Victory",
-    significance: "First Byzantine field army destroyed",
-  },
-  {
-    year: "636 CE",
-    name: "Battle of Yarmouk",
-    opponent: "Byzantine Empire",
-    result: "Decisive Victory",
-    significance: "50,000+ casualties — ended Roman rule in Syria",
-  },
-];
 
-const Timeline = () => {
+const Timeline: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
+  const { battles, timeLine } = dictionary
   return (
-    <div id="timeline" className="py-20 bg-background">
-      <div className="mb-12 space-y-4 text-center">
+    <div id={timeLine.id} className="py-20 bg-card text-card-foreground">
+      {/* Heading */}
+      <div className="mb-12 pt-12 space-y-4 text-center">
         <Badge variant="outline" className="px-3 py-1 text-sm">
-          Campaign Timeline
+          {timeLine.badge}
         </Badge>
         <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tight">
-          Key Battles of Khalid ibn al-Walid
-        </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          100+ battles fought across Arabia, Iraq, and Syria — never defeated
-        </p>
+          {timeLine.title}        </h2>
+        <p className="text-muted-foreground text-lg max-w-7xl mx-auto">
+          {timeLine.description}        </p>
       </div>
-
+      {/* Timeline */}
       <div className="grid place-items-center max-w-4xl mx-auto px-4">
-        {battles.map((battle, index) => (
+        {battles.map((battle) => (
           <div
             key={battle.name}
             className={cn(
-              "relative grid grid-cols-[1fr_auto_1fr] scroll-mt-24 justify-end gap-2 w-full",
-              index % 2 === 0 ? "rtl" : "ltr"
+              "relative grid md:grid-cols-[1fr_auto_1fr] grid-cols-[auto_1fr]  scroll-mt-24 justify-end gap-2 w-full",
+
             )}
-            dir={index % 2 === 0 ? "rtl" : "ltr"}
+
           >
             {/* Left side - Year and details */}
             <div className="sticky top-28 flex flex-1 flex-col items-end gap-2 self-start pb-4 max-md:hidden">
               <Badge className="flex size-auto w-auto justify-end rounded-sm text-sm font-medium px-3">
-                {battle.year}
-              </Badge>
+                {lang === "ar"
+                  ? `${battle.year}`.replace(/\d+/g, (n: string) => Number(n).toLocaleString("ar-EG"))
+                  : battle.year}              </Badge>
               <div className="text-muted-foreground text-right text-sm font-medium">
-                vs {battle.opponent}
+               { lang === "ar" ? "ضد" : "vs"} {battle.opponent}
               </div>
             </div>
 
