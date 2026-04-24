@@ -100,13 +100,12 @@ const HeroSection: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { hero, achievements } = dictionary;
-  const basePath = process.env.NODE_ENV === 'production' ? '/Khalid-ibn-al-Walid' : '';
   return (
     <section ref={sectionRef} >
       <div className={`bg-background
-      bg-[url('${basePath}/Khalid/Pic01-480.webp')] 
-      md:bg-[url('${basePath}/Khalid/Pic01-800.webp')] 
-      lg:bg-[url('${basePath}/Khalid/Pic01-1920.webp')] 
+      bg-[url('https://mahmoudabdelaziz1993.github.io/Khalid-ibn-al-Walid/Khalid/Pic01-480.webp')] 
+      md:bg-[url('https://mahmoudabdelaziz1993.github.io/Khalid-ibn-al-Walid/Khalid/Pic01-800.webp')] 
+      lg:bg-[url('https://mahmoudabdelaziz1993.github.io/Khalid-ibn-al-Walid/Khalid/Pic01-1920.webp')] 
       bg-blend-darken
       dark:bg-blend-color-dodge
        bg-cover md:bg-top-left bg-bottom-left  bg-no-repeat overflow-hidden relative flex flex-col xl:h-screen justify-center z-10 xl:gap-0 gap-12`}>
