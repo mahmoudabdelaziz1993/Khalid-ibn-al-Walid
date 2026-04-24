@@ -49,7 +49,7 @@ const Achievement: React.FC<Achievement & { lang: Language }> = ({ icon: Icon, v
       <p className="sm:text-xl text-lg font-semibold dark:text-primary text-accent">
         <Counter value={value} lang={lang} />
       </p>
-      <p className="text-sm font-normal text-accent">
+      <p className="text-sm font-serif text-background dark:text-foreground">
         {label}
       </p>
     </div>
@@ -108,6 +108,7 @@ const HeroSection: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
       lg:bg-[url('https://mahmoudabdelaziz1993.github.io/Khalid-ibn-al-Walid/Khalid/Pic01-1920.webp')] 
       bg-blend-darken
       dark:bg-blend-color-dodge
+      before:content-[''] before:absolute before:inset-0 dark:before:bg-background/50 before:bg-foreground/50
        bg-cover md:bg-top-left bg-bottom-left  bg-no-repeat overflow-hidden relative flex flex-col xl:h-screen justify-center z-10 xl:gap-0 gap-12`}>
         <div className="max-w-7xl mx-auto sm:px-16 px-4 w-full xl:pt-0 pt-32 ">
           <div className="relative text-start z-30 text-background dark:text-foreground">

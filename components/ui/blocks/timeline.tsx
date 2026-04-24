@@ -11,7 +11,7 @@ const Timeline: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
   return (
     <div id={timeLine.id} className="py-20 bg-card text-card-foreground">
       {/* Heading */}
-      <div className="mb-12 pt-12 space-y-4 text-center">
+      <div className="mb-12  space-y-4 text-center">
         <Badge variant="outline" className="px-3 py-1 text-sm">
           {timeLine.badge}
         </Badge>

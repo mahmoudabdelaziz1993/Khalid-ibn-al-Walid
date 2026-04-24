@@ -41,8 +41,8 @@ const Navbar: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
 
     return (
 
-        <header className={cn("fixed inset-0 z-50  bg-transparent text-background dark:text-foreground transition-all duration-500",
-            sticky && "sticky top-0  bg-background/60 text-foreground backdrop-blur-lg shadow-2xl shadow-primary/5")}>
+        <header className={cn("absolute w-full bg-transparent text-background dark:text-foreground top-0 left-0 z-50 transition-all duration-500",
+            sticky && "sticky bg-foreground/70 dark:bg-background/25 dark:text-foreground  shadow-2xl shadow-primary/5  backdrop-blur-xl")}>
             <div className="max-w-7xl mx-auto w-full px-4 py-4 sm:px-6 ">
                 <nav
                     className={cn(
