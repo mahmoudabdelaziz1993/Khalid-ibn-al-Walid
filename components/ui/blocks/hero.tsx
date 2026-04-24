@@ -100,16 +100,17 @@ const HeroSection: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { hero, achievements } = dictionary;
-const basePath = process.env.NODE_ENV === 'production' ? '/Khalid-ibn-al-Walid' : '';  return (
+  const basePath = process.env.NODE_ENV === 'production' ? '/Khalid-ibn-al-Walid' : '';
+  return (
     <section ref={sectionRef} >
-    <div 
-  className="bg-background bg-[image:var(--bg-image-mobile)] md:bg-[image:var(--bg-image-md)] lg:bg-[image:var(--bg-image-lg)] bg-blend-darken dark:bg-blend-color-dodge bg-cover bg-no-repeat ..."
-  style={{
-    '--bg-image-mobile': `url(${basePath}/Khalid/Pic01-480.webp)`,
-    '--bg-image-md': `url(${basePath}/Khalid/Pic01-800.webp)`,
-    '--bg-image-lg': `url(${basePath}/Khalid/Pic01-1920.webp)`,
-  } as React.CSSProperties}
-> <div className="max-w-7xl mx-auto sm:px-16 px-4 w-full xl:pt-0 pt-32 ">
+      <div className={`bg-background
+      bg-[url('${basePath}/Khalid/Pic01-480.webp')] 
+      md:bg-[url('${basePath}/Khalid/Pic01-800.webp')] 
+      lg:bg-[url('${basePath}/Khalid/Pic01-1920.webp')] 
+      bg-blend-darken
+      dark:bg-blend-color-dodge
+       bg-cover md:bg-top-left bg-bottom-left  bg-no-repeat overflow-hidden relative flex flex-col xl:h-screen justify-center z-10 xl:gap-0 gap-12`}>
+        <div className="max-w-7xl mx-auto sm:px-16 px-4 w-full xl:pt-0 pt-32 ">
           <div className="relative text-start z-30 text-background dark:text-foreground">
             <p className=" text-xs font-medium tracking-wider text-accent dark:text-primary">{hero.location}</p>
             <h1 className="text-inherit text-5xl md:text-6xl lg:text-7xl font-normal mt-2 mb-6">
