@@ -1,8 +1,10 @@
+# Sample workflow for building and deploying a Next.js site to GitHub Pages
 name: Deploy Next.js site to Pages
 
 on:
   push:
     branches: ["main"]
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Opt into Node 24 for the entire workflow to clear deprecation warnings
@@ -25,25 +27,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 1. Install pnpm first
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
+      # 2. Setup Node (Explicitly using version 24)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "24" # Updated to Node 24
+          node-version: "24"
 
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
+      # 3. Setup pnpm cache (Using a static path to bypass pnpm workspace bug)
       - name: Setup pnpm cache
         uses: actions/cache@v4
         with:
-          path: ${{ env.STORE_PATH }}
+          path: ~/.local/share/pnpm/store/v3
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -51,16 +51,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
+          # Automatically inject basePath and disable server-side image optimization
           static_site_generator: next
 
+      # 4. Restore Next.js cache to speed up subsequent builds
       - name: Restore Next.js cache
         uses: actions/cache@v4
         with:
-          path: .next/cache
+          path: |
+            .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
+      # 5. Install dependencies and Build
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
@@ -72,6 +76,7 @@ jobs:
         with:
           path: ./out
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
