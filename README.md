@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚔️ Khalid ibn al-Walid: The Unbeaten Commander
 
-## Getting Started
+A high-performance, multilingual biographical platform dedicated to the life and military legacy of Khalid ibn al-Walid. Built with a focus on modern web standards, accessibility, and fluid user experience.
 
-First, run the development server:
+[🔗 **View Live Demo**](https://mahmoudabdelaziz1993.github.io/Khalid-ibn-al-Walid/en)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Desktop View | Mobile View |
+| :---: | :---: |
+| ![Hero Section](./screenshots/1.png) | ![Mobile Navigation](./screenshots/2.png) |
+| *Hero section with responsive background* | *Optimized mobile experience* |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- **🌍 Multilingual Support:** Fully localized in English and Arabic (RTL) using Next.js Internationalization (i18n).
+- **🌗 Dark Mode:** Seamless theme switching with persistent user preferences.
+- **📈 Animated Stats:** High-performance counter animations using Framer Motion (Motion/React).
+- **⚡ Performance First:** Static site generation (SSG) for instant load times and perfect SEO scores.
+- **📱 Fully Responsive:** Adaptive layout from ultra-wide desktops to mobile devices.
+- **🎨 Modern UI:** Built with Tailwind CSS and Shadcn/ui for a polished, professional aesthetic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Components:** [Shadcn/ui](https://ui.shadcn.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** [GitHub Pages](https://pages.github.com/) via GitHub Actions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/mahmoudabdelaziz1993/Khalid-ibn-al-Walid.git](https://github.com/mahmoudabdelaziz1993/Khalid-ibn-al-Walid.git)
+   cd Khalid-ibn-al-Walid
