@@ -8,7 +8,7 @@ A high-performance, multilingual biographical platform dedicated to the life and
 
 ## 📸 Screenshots
 
-| Desktop View | Mobile View |
+| Dark Mode | Light Mode |
 | :---: | :---: |
 | ![Hero Section](./screenshots/1.png) | ![Mobile Navigation](./screenshots/2.png) |
 | *Hero section with responsive background* | *Optimized mobile experience* |

@@ -4,7 +4,7 @@
     "location": "Mecca, Arabia, 592–642 CE",
     "title": "The Unsheathed Sword of",
     "accent": "Allah",
-    "cta": " Explore campaigns"
+    "cta":  { "title": "Campaign Timeline", "href": "#campaign-timeline" }
   },
   "achievements": [
     {

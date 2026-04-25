@@ -4,7 +4,7 @@
     "location": "مكة، الجزيرة العربية، 592–642 م",
     "title": "سيف ",
     "accent": "الله المسلول",
-    "cta": "استكشف المعارك"
+    "cta":{ "title": "سجل الفتوحات", "href": "#campaign-timeline" }
   },
   "achievements": [
     {

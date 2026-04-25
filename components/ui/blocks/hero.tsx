@@ -118,7 +118,7 @@ const HeroSection: React.FC<maltilangualProps> = ({ dictionary, lang }) => {
               <span className="text-accent dark:text-primary">{hero.accent}</span>            </h1>
             <div>
               <Button >
-                <a href="#">{hero.cta}</a>
+                <a href={hero.cta.href}>{hero.cta.title}</a>
               </Button>
             </div>
           </div>
